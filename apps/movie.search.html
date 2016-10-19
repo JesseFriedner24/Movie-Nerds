@@ -1,0 +1,29 @@
+<div class='input-group'>
+    <!-- Search bar for user input -->
+    <input type="text" class="form-control form-control:focus" placeholder="Find my Movie" ng-model="search.title"></input>
+    <!-- Button to search for movie -->
+    <button type="button" class="btn btn-danger btn-lg btn-block" ng-click="search.getMovie()">Hunt for Movie</button>
+    <span class="input-group-addon">
+            <span class="glyphicon glyphicon-eye-open form-control:focus"> </span>
+    </span>
+</div>
+<br>
+<div class="row">
+    <!-- Will display searches movie's title -->
+    <div class="col-sm-4" ng-repeat="movie in search.movies">
+        <div class="panel panel-default">
+            <div class="panel-heading text-center">
+                {{movie.Title}}
+            </div>
+            <!--Will display searched movie's poster  -->
+            <div class="panel-body text-center">
+                <img id="movie-pic " ng-src="{{movie.Poster}} ">
+            </div>
+            <!-- Will link user to selected movie's detail page -->
+            <div class="text-center">
+                <a ui-sref="detail({ movieId : movie.imdbID }) ">Movie Details</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div ui-view></div>

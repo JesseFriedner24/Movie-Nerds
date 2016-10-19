@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myApp">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Game of Movies</title>
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+    <!-- endbower -->
+    <!-- inject:css -->
+    <link rel="stylesheet" href="styles.css"></link>
+    <!-- endinject -->
+</head>
+
+<body>
+    <div>
+        <header id="main-header">
+            <!-- Contains JUMBOTRON  -->
+            <div class="container">
+                <div class="jumbotron" style="background-image: url(http://i.imgur.com/u7VsU.jpg)">
+                    <h1 align="center"><i><strong><font color="red">A Song of Film and Sound</font></i></strong></h1>
+                </div>
+            </div>
+        </header>
+    </div>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+    <!-- bower:js -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-ui-router/release/angular-ui-router.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <!-- endbower -->
+    <!-- inject:js -->
+    <script src="/apps/app.js"></script>
+    <script src="/apps/movie.detail.controller.js"></script>
+    <script src="/apps/movie.search.controller.js"></script>
+    <script src="/apps/movie.service.js"></script>
+    <!-- endinject -->
+</body>
+
+</html>
