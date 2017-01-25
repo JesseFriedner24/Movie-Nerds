@@ -1,8 +1,13 @@
+<style>
+body {color: dodgerblue;}
+</style>
+
+
 <div class='input-group'>
     <!-- Search bar for user input -->
-    <input type="text" class="form-control form-control:focus" placeholder="Find my Movie" ng-model="search.title"></input>
+    <input type="text" class="form-control form-control:focus" placeholder="Search" ng-model="search.title"></input>
     <!-- Button to search for movie -->
-    <button type="button" class="btn btn-danger btn-lg btn-block" ng-click="search.getMovie()">Hunt for Movie</button>
+    <button type="button" class="btn btn-info btn-lg btn-block" ng-click="search.getMovie()">Find a Movie</button>
     <span class="input-group-addon">
             <span class="glyphicon glyphicon-eye-open form-control:focus"> </span>
     </span>
@@ -12,9 +17,9 @@
     <!-- Will display searches movie's title -->
     <div class="col-sm-4" ng-repeat="movie in search.movies">
         <div class="panel panel-default">
-            <div class="panel-heading text-center">
+            <font color="dodgerblue"><div class="panel-heading text-center">
                 {{movie.Title}}
-            </div>
+            </div></font>
             <!--Will display searched movie's poster  -->
             <div class="panel-body text-center">
                 <img id="movie-pic " ng-src="{{movie.Poster}} ">
